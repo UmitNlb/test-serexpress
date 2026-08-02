@@ -126,22 +126,29 @@ function sendMail(){
   btn.disabled=true;txt.textContent='Envoi en cours...';
   var now=new Date();
   var date=now.toLocaleDateString('fr-FR')+' \u00e0 '+now.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
-  fetch('https://formspree.io/f/xzdoobkv',{
+
+  function encodeForm(data){
+    return Object.keys(data).map(function(k){
+      return encodeURIComponent(k)+'='+encodeURIComponent(data[k]);
+    }).join('&');
+  }
+
+  fetch('/',{
     method:'POST',
-    headers:{'Accept':'application/json','Content-Type':'application/json'},
-    body:JSON.stringify({
-      _replyto:email,
-      _subject:'Nouveau devis Sernettoyage - '+service,
-      Nom:prenom+' '+nom,
-      Email:email,
-      Telephone:tel,
-      Service:service,
-      Adresse:adresse||'Non pr\u00e9cis\u00e9e',
-      Date_souhaitee:dateSouhaitee||'Non pr\u00e9cis\u00e9e',
-      Urgence:urgence,
-      Message:message||'Aucun message',
-      Source:source||'Non renseign\u00e9',
-      Date:date
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:encodeForm({
+      'form-name':'devis',
+      prenom:prenom,
+      nom:nom,
+      email:email,
+      telephone:tel,
+      service:service,
+      adresse:adresse||'Non pr\u00e9cis\u00e9e',
+      date_souhaitee:dateSouhaitee||'Non pr\u00e9cis\u00e9e',
+      urgence:urgence,
+      message:message||'Aucun message',
+      source:source||'Non renseign\u00e9',
+      date_envoi:date
     })
   })
   .then(function(res){
@@ -149,7 +156,7 @@ function sendMail(){
       document.getElementById('fForm').style.display='none';
       document.getElementById('fOk').classList.add('show');
     } else {
-      return res.json().then(function(d){throw new Error(d.error||'Erreur '+res.status);});
+      throw new Error('Erreur '+res.status);
     }
   })
   .catch(function(err){
@@ -167,4 +174,44 @@ function sendMail(){
   // This preserves styles and other scripts that may reference the overlay without altering behavior.
   // No-op handlers kept intentionally minimal.
   // If needed later, reintroduce custom behavior here.
+})();
+
+// LIGHTBOX — Réalisations
+var lbImages=['real-01.jpg','real-02.jpg','real-03.jpg','real-04.jpg','real-05.jpg','real-06.jpg','real-07.jpg','real-08.jpg','real-09.jpg','real-10.jpg','real-11.jpg','real-12.jpg'];
+var lbIndex=0;
+function openLightbox(i){
+  lbIndex=i;
+  var lb=document.getElementById('lb');
+  document.getElementById('lb-img').src=lbImages[lbIndex];
+  document.getElementById('lb-cur').textContent=lbIndex+1;
+  document.getElementById('lb-total').textContent=lbImages.length;
+  lb.classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lb').classList.remove('show');
+  document.body.style.overflow='';
+}
+function lbNav(dir){
+  lbIndex=(lbIndex+dir+lbImages.length)%lbImages.length;
+  document.getElementById('lb-img').src=lbImages[lbIndex];
+  document.getElementById('lb-cur').textContent=lbIndex+1;
+}
+document.getElementById('lb').addEventListener('click',function(e){
+  if(e.target===this)closeLightbox();
+});
+document.addEventListener('keydown',function(e){
+  if(!document.getElementById('lb').classList.contains('show'))return;
+  if(e.key==='Escape')closeLightbox();
+  if(e.key==='ArrowRight')lbNav(1);
+  if(e.key==='ArrowLeft')lbNav(-1);
+});
+// Swipe tactile mobile
+(function(){
+  var lb=document.getElementById('lb'),sx=0;
+  lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>40)lbNav(dx>0?-1:1);
+  },{passive:true});
 })();
