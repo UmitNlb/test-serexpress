@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sernettoyage — Nettoyage Professionnel</title>
+<meta name="description" content="Sernettoyage : nettoyage professionnel de fa&#231;ades, terrasses, toitures, g&#238;tes et chantiers partout en France, 7j/7, urgences 48h. Devis gratuit sous 24h.">
+<meta property="og:title" content="Sernettoyage — Nettoyage Professionnel">
+<meta property="og:description" content="Nettoyage professionnel de fa&#231;ades, terrasses, toitures, g&#238;tes et chantiers partout en France. Devis gratuit sous 24h.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sernettoyage.fr">
+<meta property="og:locale" content="fr_FR">
+<link rel="canonical" href="https://sernettoyage.fr">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- COOKIE -->
+<div id="ck">
+  <p>Nous utilisons des cookies essentiels pour le bon fonctionnement du site. <a onclick="openRgpd()">Politique de confidentialit&#233;</a></p>
+  <div class="ck-btns">
+    <button class="ck-ok" onclick="acceptCk()">Accepter</button>
+    <button class="ck-more" onclick="openRgpd()">Personnaliser</button>
+  </div>
+</div>
+
+<!-- RGPD -->
+<div id="rgpd">
+  <div class="rbox">
+    <button class="rclose" onclick="closeRgpd()">&#10005;</button>
+    <h3>Politique de confidentialit&#233;</h3>
+    <span class="rsub">Sernettoyage</span>
+    <div class="rsec">
+      <h4>1. Qui sommes-nous</h4>
+      <p><strong>Sernettoyage</strong> est une entreprise de nettoyage professionnel intervenant en France enti&#232;re. Contact&nbsp;: <strong>serexpress45@gmail.com</strong> &mdash; 07 81 30 84 16.</p>
+    </div>
+    <div class="rsec">
+      <h4>2. Donn&#233;es collect&#233;es</h4>
+      <p>Lorsque vous soumettez notre formulaire de devis, nous collectons les informations suivantes&nbsp;:</p>
+      <ul>
+        <li><strong>Nom &amp; pr&#233;nom</strong> &mdash; pour identifier votre demande</li>
+        <li><strong>Adresse email</strong> &mdash; pour vous envoyer le devis et vous recontacter</li>
+        <li><strong>Num&#233;ro de t&#233;l&#233;phone</strong> &mdash; pour vous rappeler dans les meilleurs d&#233;lais</li>
+        <li><strong>Adresse du chantier</strong> &mdash; pour &#233;valuer le d&#233;placement et la prestation</li>
+        <li><strong>Type de service, date souhait&#233;e, message</strong> &mdash; pour personnaliser votre devis</li>
+      </ul>
+      <p style="margin-top:8px">Ces donn&#233;es sont utilis&#233;es <strong>exclusivement</strong> pour traiter votre demande et vous recontacter. Elles ne sont <strong>jamais revendues ni partag&#233;es</strong> avec des tiers &#224; des fins commerciales ou publicitaires.</p>
+    </div>
+    <div class="rsec">
+      <h4>3. Dur&#233;e de conservation</h4>
+      <p>Vos donn&#233;es sont conserv&#233;es <strong>12 mois</strong> maximum apr&#232;s votre derni&#232;re interaction. En cas de prestation r&#233;alis&#233;e, elles peuvent &#234;tre conserv&#233;es jusqu&rsquo;&#224; <strong>3 ans</strong> pour des raisons contractuelles et comptables, conform&#233;ment &#224; la loi fran&#231;aise. Suppression sur simple demande.</p>
+    </div>
+    <div class="rsec">
+      <h4>4. Cookies</h4>
+      <div class="rrow">
+        <div><b>Cookies essentiels</b><small>N&#233;cessaires au bon fonctionnement. Toujours actifs.</small></div>
+        <label class="rtog"><input type="checkbox" checked disabled><span class="rtog-t"><span class="rtog-th"></span></span></label>
+      </div>
+      <div class="rrow">
+        <div><b>Cookies analytiques</b><small>Mesure d&rsquo;audience anonyme pour am&#233;liorer le site.</small></div>
+        <label class="rtog"><input type="checkbox" id="ck-analytics"><span class="rtog-t"><span class="rtog-th"></span></span></label>
+      </div>
+      <p style="font-size:.72rem;color:#bbb;margin-top:8px">Aucun cookie publicitaire ni de tracking tiers n&rsquo;est utilis&#233; sur ce site.</p>
+    </div>
+    <div class="rsec">
+      <h4>5. Vos droits (RGPD)</h4>
+      <p>Conform&#233;ment au R&#232;glement europ&#233;en 2016/679, vous disposez des droits suivants&nbsp;:</p>
+      <ul>
+        <li><strong>Acc&#232;s</strong> &mdash; obtenir une copie de vos donn&#233;es</li>
+        <li><strong>Rectification</strong> &mdash; corriger des informations inexactes</li>
+        <li><strong>Effacement</strong> &mdash; demander la suppression de vos donn&#233;es</li>
+        <li><strong>Portabilit&#233;</strong> &mdash; recevoir vos donn&#233;es dans un format structur&#233;</li>
+        <li><strong>Opposition</strong> &mdash; vous opposer au traitement pour motif l&#233;gitime</li>
+      </ul>
+      <p style="margin-top:8px">Pour exercer ces droits&nbsp;: <strong>serexpress45@gmail.com</strong>. En cas de litige, vous pouvez saisir la <strong>CNIL</strong> (cnil.fr).</p>
+    </div>
+    <button class="rsave" onclick="saveRgpd()">Enregistrer mes choix</button>
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<a id="wa" href="https://wa.me/33781308416" target="_blank" aria-label="WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!-- MENU MOBILE -->
+<div id="mob">
+  <div class="mob-links">
+    <a href="#sernettoyage" onclick="closeMob()">Sernettoyage</a>
+    <a href="#realisations"  onclick="closeMob()">R&#233;alisations</a>
+    <a href="#temoignages"  onclick="closeMob()">Avis clients</a>
+    <div class="mob-divider"></div>
+    <a href="#prix"         onclick="closeMob()">Tarifs</a>
+    <a href="#apropos"      onclick="closeMob()">&#192; propos</a>
+    <a href="#contact" class="mob-cta-link" onclick="closeMob()">Devis gratuit</a>
+  </div>
+  <div class="mob-bottom">
+    <a href="https://www.instagram.com/SerNettoyage" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@SerNettoyage" target="_blank" rel="noopener">TikTok</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="n-logo" href="#hero">
+    <div class="n-mark"><img src="a1ad2105-e284-467f-89ce-c6de68e0e595.jpeg" alt="Sernettoyage"></div>
+    <div class="n-words"><b>Sernettoyage</b></div>
+  </a>
+  <ul class="n-links">
+    <li><a href="#sernettoyage">Sernettoyage</a></li>
+    <li><a href="#realisations">R&#233;alisations</a></li>
+    <li><a href="#temoignages">Avis</a></li>
+    <li><a href="#prix">Tarifs</a></li>
+    <li><a href="#apropos">&#192; propos</a></li>
+    <li><a href="#contact" class="n-cta">Devis gratuit</a></li>
+  </ul>
+  <button class="n-burger" id="burger" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="h-fallback"></div>
+  <div class="h-ov"></div>
+  <div class="h-fade"></div>
+  <div class="h-cnt">
+    <div class="h-eyebrow"><div class="h-dot"></div>Nettoyage professionnel &mdash; Urgences 48h &mdash; France enti&#232;re &mdash; Devis sous 24h</div>
+    <h1 class="h-h1">Votre espace,<br>notre <em>fiert&#233;.</em></h1>
+    <p class="h-p">Nettoyage professionnel de fa&#231;ades, terrasses, toitures, g&#238;tes et chantiers &mdash; partout en France, 7j/7, y compris en urgence. Mat&#233;riel haute performance, r&#233;sultats garantis.</p>
+    <div class="h-btns"><a href="#contact" class="btn-p">Devis gratuit &#8594;</a></div>
+  </div>
+
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat rv"><div class="stat-n" data-target="50">0<span>+</span></div><div class="stat-l">Clients satisfaits</div></div>
+  <div class="stat rv d1"><div class="stat-n" data-target="5">0<span>+</span></div><div class="stat-l">Ans d&rsquo;exp&#233;rience</div></div>
+  <div class="stat rv d2"><div class="stat-n" data-target="100">0<span>%</span></div><div class="stat-l">Satisfaction garantie</div></div>
+  <div class="stat rv d3"><div class="stat-n" data-target="50">0<span>+</span></div><div class="stat-l">Chantiers r&#233;alis&#233;s</div></div>
+</div>
+<div class="div-dark-to-cream"></div>
+
+<!-- SERVICES -->
+<section id="sernettoyage" class="sec">
+  <div class="sj-head">
+    <div>
+      <p class="ey rv">Propret&#233;</p>
+      <h2 class="sh2 rv d1">Sernettoyage &mdash;<br>Nettoyage <em>professionnel</em></h2>
+    </div>
+    <p class="sp rv d2" style="margin:0;max-width:400px">Interventions sur-mesure partout en France, fa&#231;ades, terrasses, chantiers et locations saisonni&#232;res, mat&#233;riel haut de gamme, 7j/7.</p>
+  </div>
+  <div class="sj-grid">
+    <div class="sj-card rv d1">
+      <div class="sj-img"><img src="01.webp" alt="Terrasses"><span class="sj-tag">Sernettoyage</span></div>
+      <div class="sj-body"><div class="sj-num">Service 01</div><h3>Terrasses &amp; All&#233;es</h3><p>D&#233;moussage, haute pression et traitement anti-glisse pour redonner vie &#224; vos sols ext&#233;rieurs.</p><a href="#contact" class="sj-link">Demander un devis &#8594;</a></div>
+    </div>
+    <div class="sj-card rv d2">
+      <div class="sj-img"><img src="net3.webp" alt="Fa&#231;ades"><span class="sj-tag">Sernettoyage</span></div>
+      <div class="sj-body"><div class="sj-num">Service 02</div><h3>Fa&#231;ades &amp; Murs</h3><p>Nettoyage cibl&#233; pour restaurer pierres et enduits sans agressivit&#233;, finitions soign&#233;es.</p><a href="#contact" class="sj-link">Demander un devis &#8594;</a></div>
+    </div>
+    <div class="sj-card rv d3">
+      <div class="sj-img"><img src="net1.jpeg" alt="Chantier"><span class="sj-tag">Sernettoyage</span></div>
+      <div class="sj-body"><div class="sj-num">Service 03</div><h3>Nettoyage Chantier</h3><p>Remise en &#233;tat apr&#232;s travaux, nettoyage fin et s&#233;curisation des zones sensibles.</p><a href="#contact" class="sj-link">Demander un devis &#8594;</a></div>
+    </div>
+    <div class="sj-card rv d1">
+      <div class="sj-img"><img src="04.webp" alt="G&#238;te"><span class="sj-tag">Sernettoyage</span></div>
+      <div class="sj-body"><div class="sj-num">Service 04</div><h3>Nettoyage de G&#238;te</h3><p>Entre deux locations, nettoyage rapide et complet pour accueillir vos voyageurs dans les meilleures conditions.</p><a href="#contact" class="sj-link">Demander un devis &#8594;</a></div>
+    </div>
+    <div class="sj-card rv d2">
+      <div class="sj-img"><img src="05.jpg" alt="Toiture"><span class="sj-tag">Sernettoyage</span></div>
+      <div class="sj-body"><div class="sj-num">Service 05</div><h3>Toitures &amp; Goutti&#232;res</h3><p>D&#233;moussage, nettoyage et d&#233;bouchage de goutti&#232;res pour prot&#233;ger votre bien dans la dur&#233;e.</p><a href="#contact" class="sj-link">Demander un devis &#8594;</a></div>
+    </div>
+    <div class="sj-card rv d3">
+      <div class="sj-img"><img src="06.jpg" alt="Urgence"><span class="sj-tag">Sernettoyage</span></div>
+      <div class="sj-body"><div class="sj-num">Service 06</div><h3>Intervention Urgence</h3><p>D&#233;g&#226;ts, sinistres, remise en &#233;tat express&nbsp;: intervention en priorit&#233; pour traiter votre situation.</p><a href="#contact" class="sj-link">Demander un devis &#8594;</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="div-cream-to-cream2"></div><div class="div-cream2-to-dark"></div><div class="div-dark-to-cream"></div>
+
+<!-- REALISATIONS -->
+<section id="realisations" class="sec">
+  <div class="sj-head">
+    <div>
+      <p class="ey rv">Nos r&#233;alisations</p>
+      <h2 class="sh2 rv d1">Fin de chantier <em>&mdash; Sens</em></h2>
+    </div>
+    <p class="sp rv d2" style="margin:0;max-width:400px">Remise en &#233;tat compl&#232;te apr&#232;s construction&nbsp;: villa individuelle &#224; Sens (89), nettoyage int&#233;rieur et ext&#233;rieur, menuiseries, sanitaires et sols avant livraison au propri&#233;taire.</p>
+  </div>
+  <div class="real-blocks">
+    <div class="real-block real-block-hero rv d1">
+      <span class="real-block-label">Ext&#233;rieur</span>
+      <div class="real-block-grid cols-1">
+        <div class="real-sub" onclick="openLightbox(0)"><img src="real-01.jpg" alt="Fin de chantier Sens - fa&#231;ade ext&#233;rieure" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+      </div>
+    </div>
+
+    <div class="real-block rv d2">
+      <span class="real-block-label">Chambres</span>
+      <div class="real-block-grid cols-2">
+        <div class="real-sub" onclick="openLightbox(1)"><img src="real-02.jpg" alt="Fin de chantier Sens - chambre nettoy&#233;e" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+        <div class="real-sub" onclick="openLightbox(2)"><img src="real-03.jpg" alt="Fin de chantier Sens - pi&#232;ce avec niche" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+      </div>
+    </div>
+
+    <div class="real-block real-block-wide rv d3">
+      <span class="real-block-label">Salle de bain</span>
+      <div class="real-block-grid cols-feat">
+        <div class="real-sub feat" onclick="openLightbox(3)"><img src="real-04.jpg" alt="Fin de chantier Sens - salle de bain" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+        <div class="real-sub-stack">
+          <div class="real-sub" onclick="openLightbox(4)"><img src="real-05.jpg" alt="Fin de chantier Sens - vasque nettoy&#233;e" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+          <div class="real-sub" onclick="openLightbox(5)"><img src="real-06.jpg" alt="Fin de chantier Sens - sanitaires" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="real-block rv d1">
+      <span class="real-block-label">Rangements &amp; finitions</span>
+      <div class="real-block-grid cols-2">
+        <div class="real-sub" onclick="openLightbox(6)"><img src="real-07.jpg" alt="Fin de chantier Sens - rangements" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+        <div class="real-sub" onclick="openLightbox(7)"><img src="real-08.jpg" alt="Fin de chantier Sens - finitions bois" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+      </div>
+    </div>
+
+    <div class="real-block rv d2">
+      <span class="real-block-label">Escalier</span>
+      <div class="real-block-grid cols-2">
+        <div class="real-sub" onclick="openLightbox(8)"><img src="real-09.jpg" alt="Fin de chantier Sens - escalier" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+        <div class="real-sub" onclick="openLightbox(9)"><img src="real-10.jpg" alt="Fin de chantier Sens - marches nettoy&#233;es" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+      </div>
+    </div>
+
+    <div class="real-block rv d3">
+      <span class="real-block-label">Menuiseries</span>
+      <div class="real-block-grid cols-2">
+        <div class="real-sub" onclick="openLightbox(10)"><img src="real-11.jpg" alt="Fin de chantier Sens - d&#233;tail menuiserie" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+        <div class="real-sub" onclick="openLightbox(11)"><img src="real-12.jpg" alt="Fin de chantier Sens - fen&#234;tre finie" loading="lazy"><span class="real-zoom">&#8981;</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="real-note rv d2">Un chantier similaire &#224; pr&#233;parer&nbsp;? <a href="#contact">Demandez votre devis gratuit &#8594;</a></p>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lb" class="lb">
+  <button class="lb-close" onclick="closeLightbox()" aria-label="Fermer">&#10005;</button>
+  <button class="lb-arrow lb-prev" onclick="lbNav(-1)" aria-label="Pr&#233;c&#233;dent">&#8592;</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lb-arrow lb-next" onclick="lbNav(1)" aria-label="Suivant">&#8594;</button>
+  <div class="lb-count"><span id="lb-cur">1</span> / <span id="lb-total">12</span></div>
+</div>
+
+<div class="div-cream-to-white"></div>
+
+<!-- TEMOIGNAGES -->
+<section id="temoignages" class="sec">
+  <div style="text-align:center">
+    <p class="ey rv" style="justify-content:center">Avis clients</p>
+    <h2 class="sh2 rv d1">Ce que disent<br>nos <em>clients</em></h2>
+
+  </div>
+  <div class="temo-grid">
+    <div class="temo-card rv d1"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="temo-q">&#8220;</div><p class="temo-text">Nettoyage de fin de chantier pour ma maison, un r&#233;sultat plus qu&rsquo;excellent, un nettoyage au centime pr&#232;s, je suis tr&#232;s satisfaite. Tr&#232;s bonne entreprise, au top, je recommande et je n&rsquo;h&#233;siterai pas &#224; retravailler avec cette &#233;quipe &#128077;&#128077;&#128077;&#128077;</p><div class="temo-author"><div class="temo-av">A</div><div><div class="temo-name">Aysun B.</div><div class="temo-loc">Avis Google v&#233;rifi&#233;</div></div></div></div>
+    <div class="temo-card rv d2"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="temo-q">&#8220;</div><p class="temo-text">Nettoyage de nos bureaux tr&#232;s soign&#233;. &#199;a respire le neuf&nbsp;! Personnel attentif et professionnel. Je recommande Sernettoyage. Merci.</p><div class="temo-author"><div class="temo-av">R</div><div><div class="temo-name">Resul G.</div><div class="temo-loc">Avis Google v&#233;rifi&#233;</div></div></div></div>
+    <div class="temo-card rv d3"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="temo-q">&#8220;</div><p class="temo-text">Tr&#232;s bonne exp&#233;rience, tr&#232;s satisfait pour la prestation de notre maison.</p><div class="temo-author"><div class="temo-av">U</div><div><div class="temo-name">Umit B.</div><div class="temo-loc">Avis Google v&#233;rifi&#233;</div></div></div></div>
+  </div>
+  <div class="temo-cta rv d3">
+    <div><h4>Partagez votre exp&#233;rience</h4><p>Votre avis aide d&rsquo;autres clients &#224; nous faire confiance.</p></div>
+    <a class="g-btn" href="https://search.google.com/local/writereview?placeid=ChIJ5SCypJZ_5UcRmee9CE_3Wgg" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M21.35 11.1c0-.65-.06-1.28-.18-1.88H12v3.56h5.64c-.24 1.3-.96 2.4-2.06 3.12v2.6h3.33c1.95-1.8 3.08-4.44 3.08-7.4z" fill="#4285F4"/><path d="M12 22c2.7 0 4.96-.9 6.62-2.44l-3.33-2.6c-.93.62-2.12.99-3.29.99-2.53 0-4.68-1.7-5.44-3.99H2.9v2.5C4.52 19.9 8.02 22 12 22z" fill="#34A853"/><path d="M6.56 13.97a6.02 6.02 0 010-3.94V7.53H2.9a9.98 9.98 0 000 8.94l3.66-2.5z" fill="#FBBC05"/><path d="M12 6.5c1.47 0 2.8.5 3.84 1.48l2.88-2.88C16.95 3.7 14.7 3 12 3 8.02 3 4.52 5.1 2.9 7.97l3.66 2.53C7.32 8.2 9.47 6.5 12 6.5z" fill="#EA4335"/></svg>
+      Laisser un avis Google
+    </a>
+  </div>
+</section>
+
+<div class="div-cream-to-white"></div>
+
+<!-- PRIX -->
+<section id="prix" class="sec">
+  <div style="text-align:center">
+    <p class="ey rv" style="justify-content:center">Tarifs</p>
+    <h2 class="sh2 rv d1">Nos <em>forfaits</em></h2>
+    <p class="sp rv d2" style="margin:0 auto;text-align:center">Des offres claires et transparentes. Devis gratuit.</p>
+  </div>
+  <div class="prix-grid">
+    <div class="prix-card rv d1">
+      <div class="prix-name">Essentiel</div><div class="prix-price">Sur devis</div><div class="prix-period">intervention ponctuelle</div><div class="prix-sep"></div>
+      <ul class="prix-list"><li>Nettoyage terrasse</li><li>D&#233;moussage haute pression</li><li>Fa&#231;ade ou mur unique</li><li>Intervention unique</li></ul>
+      <a href="#contact" class="prix-btn dark">Demander un devis</a>
+    </div>
+    <div class="prix-card featured rv d2">
+      <div class="prix-badge">Populaire</div>
+      <div class="prix-name">R&#233;gulier</div><div class="prix-price">Sur devis</div><div class="prix-period">suivi mensuel</div><div class="prix-sep"></div>
+      <ul class="prix-list"><li>Nettoyage terrasse mensuel</li><li>Entretien fa&#231;ades</li><li>D&#233;bouchage goutti&#232;res</li><li>Nettoyage g&#238;te entre locataires</li><li>Priorit&#233; d&rsquo;intervention</li></ul>
+      <a href="#contact" class="prix-btn gold">Demander un devis</a>
+    </div>
+    <div class="prix-card rv d3">
+      <div class="prix-name">Premium</div><div class="prix-price">Sur devis</div><div class="prix-period">tout inclus</div><div class="prix-sep"></div>
+      <ul class="prix-list"><li>Tout le forfait R&#233;gulier</li><li>Toiture &amp; goutti&#232;res</li><li>Nettoyage chantier</li><li>Urgence 48h garantie</li><li>Bilan photo mensuel</li></ul>
+      <a href="#contact" class="prix-btn dark">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<div class="div-white-to-cream"></div>
+
+<!-- A PROPOS -->
+<section id="apropos" class="sec">
+  <div class="ap-layout">
+    <div class="rv">
+      <div class="ap-imgs">
+        <div class="ap-badge"><strong>Exp&#233;rience</strong><span>Depuis 2021</span></div>
+        <div class="ap-main"><img src="apropos 1.jpg" alt="Equipe Sernettoyage"></div>
+        <div class="ap-float"><img src="a propos.jpg" alt="Nettoyage professionnel"></div>
+      </div>
+    </div>
+    <div class="rv d2">
+      <p class="ey">&#192; propos</p>
+      <h2 class="sh2" style="margin:0">Un professionnel<br>&#224; votre <em>service</em></h2>
+      <p class="sp" style="margin-top:12px"><strong>Sernettoyage</strong>, c&rsquo;est un professionnel passionn&#233; sp&#233;cialis&#233; dans le nettoyage ext&#233;rieur et int&#233;rieur, pour que chaque espace retrouve son &#233;clat depuis 2021.</p>
+      <div class="ap-kpis">
+        <div class="ap-kpi"><strong>50+</strong><span>Clients satisfaits</span></div>
+        <div class="ap-kpi"><strong>7j/7</strong><span>Disponibilit&#233;</span></div>
+        <div class="ap-kpi"><strong>100%</strong><span>Satisfaction</span></div>
+      </div>
+      <div class="ap-vals" style="margin-top:22px">
+        <div class="ap-v rv d2">
+          <div class="ap-v-icon"><svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg></div>
+          <h4>Expertise</h4><p>Mat&#233;riel haute performance et techniques &#233;prouv&#233;es pour chaque type de surface.</p>
+        </div>
+        <div class="ap-v rv d3">
+          <div class="ap-v-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h4>Ponctualit&#233;</h4><p>Respect des d&#233;lais et des horaires &#224; chaque intervention, parole toujours tenue.</p>
+        </div>
+        <div class="ap-v rv d2">
+          <div class="ap-v-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h4>Qualit&#233;</h4><p>Finitions soign&#233;es et r&#233;sultats impeccables, contr&#244;l&#233;s avant chaque d&#233;part de chantier.</p>
+        </div>
+        <div class="ap-v rv d3">
+          <div class="ap-v-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <h4>&#201;coute</h4><p>Vos besoins guident chaque d&#233;cision, du premier contact &#224; la livraison du chantier.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div-subtle"></div>
+
+<!-- LOCALISATION -->
+<section id="localisation" class="sec">
+  <div style="text-align:center">
+    <p class="ey rv" style="justify-content:center">Zone d&rsquo;intervention</p>
+    <h2 class="sh2 rv d1">O&#249; nous <em>intervenons</em></h2>
+    <p class="sp rv d2" style="margin:0 auto;text-align:center">Partout en <strong>France enti&#232;re</strong>, 7 jours sur 7 y compris en urgence.</p>
+  </div>
+  <div class="map-wrap rv d3"><iframe src="https://www.google.com/maps?q=France&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec" style="padding-top:40px">
+  <div class="ct-layout">
+    <div class="rv">
+      <p class="ey">Contact</p>
+      <h2 class="sh2">Parlons de<br>votre <em>projet</em></h2>
+      <p style="font-size:.92rem;color:var(--muted);line-height:1.7;margin-bottom:4px">Remplissez le formulaire, nous vous rappelons et envoyons votre devis sous 24h. Aucun engagement.</p>
+      <div class="ct-info">
+        <div class="ct-row"><div class="ct-ic">&#128222;</div><div><div class="ct-lbl">T&#233;l&#233;phone</div><div class="ct-val">07 81 30 84 16</div></div></div>
+        <div class="ct-row"><div class="ct-ic">&#9993;</div><div><div class="ct-lbl">Email</div><div class="ct-val">serexpress45@gmail.com</div></div></div>
+        <div class="ct-row"><div class="ct-ic">&#128205;</div><div><div class="ct-lbl">Zone</div><div class="ct-val">Toute la France &mdash; 7j/7</div></div></div>
+      </div>
+      <div class="soc-row">
+        <a class="soc" href="https://www.instagram.com/SerNettoyage" target="_blank" rel="noopener">Instagram</a>
+        <a class="soc" href="https://www.tiktok.com/@SerNettoyage" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+
+    <div class="rv d2">
+      <div class="form-wrap">
+        <!-- Header -->
+        <div class="form-head">
+          <h3>Demande de devis</h3>
+          <p>Gratuit, sans engagement &mdash; r&#233;ponse sous 24h</p>
+          <div class="fh-tags">
+            <span class="fh-tag">Gratuit</span>
+            <span class="fh-tag">Confidentiel</span>
+            <span class="fh-tag">Rappel garanti</span>
+          </div>
+        </div>
+        <!-- Steps indicator -->
+        <div class="form-stps">
+          <div class="fs"><div class="fs-n on" id="fsn1">1</div><span class="fs-l on" id="fsl1">Coordonn&#233;es</span></div>
+          <div class="fs-sep" id="fsep1"></div>
+          <div class="fs"><div class="fs-n" id="fsn2">2</div><span class="fs-l" id="fsl2">Service</span></div>
+          <div class="fs-sep" id="fsep2"></div>
+          <div class="fs"><div class="fs-n" id="fsn3">3</div><span class="fs-l" id="fsl3">D&#233;tails</span></div>
+        </div>
+        <!-- Body -->
+        <div class="form-body">
+          <form id="devisForm" name="devis" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display:contents">
+          <input type="hidden" name="form-name" value="devis">
+          <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Ne pas remplir&nbsp;: <input name="bot-field"></label></p>
+          <div id="fForm">
+            <!-- JS compat (masqu&#233;) -->
+            <div style="display:none">
+              <div class="steps-track"><div class="step-dot active" id="sd1">1</div><div class="step-line" id="sl1"></div><div class="step-dot" id="sd2">2</div><div class="step-line" id="sl2"></div><div class="step-dot" id="sd3">3</div></div>
+              <div class="steps-labels"><span class="slbl active" id="slbl1">1</span><span class="slbl" id="slbl2">2</span><span class="slbl" id="slbl3">3</span></div>
+            </div>
+
+            <!-- Etape 1 -->
+            <div class="step-panel active" id="sp1">
+              <div class="frow">
+                <div class="fld"><label>Pr&#233;nom *</label><input class="inp" type="text" id="f_prenom" name="prenom" placeholder="Jean" autocomplete="given-name"></div>
+                <div class="fld"><label>Nom *</label><input class="inp" type="text" id="f_nom" name="nom" placeholder="Dupont" autocomplete="family-name"></div>
+              </div>
+              <div class="fld"><label>Email *</label><input class="inp" type="email" id="f_email" name="email" placeholder="jean@email.com" autocomplete="email"></div>
+              <div class="fld"><label>T&#233;l&#233;phone *</label><input class="inp" type="tel" id="f_tel" name="telephone" placeholder="06 12 34 56 78" autocomplete="tel"></div>
+              <div class="step-btns"><button type="button" class="btn-nxt" onclick="goStep(2)">Suivant &#8594;</button></div>
+            </div>
+
+            <!-- Etape 2 -->
+            <div class="step-panel" id="sp2">
+              <div class="fld" style="margin-bottom:10px"><label>Service souhait&#233; *</label></div>
+              <div class="srv-list">
+                <div class="srv-item" onclick="pickSrv(this,'Terrasses et all\u00e9es')"><div class="srv-item-left"><div class="srv-item-dot"></div><span class="srv-item-name">Terrasses &amp; All&#233;es</span></div><span class="srv-item-tag">Ext&#233;rieur</span></div>
+                <div class="srv-item" onclick="pickSrv(this,'Fa\u00e7ades et murs')"><div class="srv-item-left"><div class="srv-item-dot"></div><span class="srv-item-name">Fa&#231;ades &amp; Murs</span></div><span class="srv-item-tag">Ext&#233;rieur</span></div>
+                <div class="srv-item" onclick="pickSrv(this,'Nettoyage chantier')"><div class="srv-item-left"><div class="srv-item-dot"></div><span class="srv-item-name">Nettoyage apr&#232;s chantier</span></div><span class="srv-item-tag">Chantier</span></div>
+                <div class="srv-item" onclick="pickSrv(this,'Nettoyage g\u00eete ou location')"><div class="srv-item-left"><div class="srv-item-dot"></div><span class="srv-item-name">G&#238;te &amp; Location saisonni&#232;re</span></div><span class="srv-item-tag">Int&#233;rieur</span></div>
+                <div class="srv-item" onclick="pickSrv(this,'Toiture et goutti\u00e8res')"><div class="srv-item-left"><div class="srv-item-dot"></div><span class="srv-item-name">Toiture &amp; Goutti&#232;res</span></div><span class="srv-item-tag">Ext&#233;rieur</span></div>
+                <div class="srv-item" onclick="pickSrv(this,'Urgence')"><div class="srv-item-left"><div class="srv-item-dot"></div><span class="srv-item-name">Intervention urgente</span></div><span class="srv-item-tag">Prioritaire</span></div>
+              </div>
+              <input type="hidden" id="f_service" name="service">
+              <div class="fld"><label>Adresse du chantier</label><input class="inp" type="text" id="f_adresse" name="adresse" placeholder="15 rue des Lilas, 91000 Evry"></div>
+              <div class="fld"><label>Date souhait&#233;e</label><div class="date-wrap"><input class="inp" type="date" id="f_date" name="date_souhaitee"></div></div>
+              <div class="urg-row" id="urgRow">
+                <div><b>Intervention urgente</b><small>Cocher pour &#234;tre prioris&#233;</small></div>
+                <label class="tog" onclick="event.stopPropagation()"><input type="checkbox" id="f_urgence_switch" name="urgence" onchange="this.closest('.urg-row').classList.toggle('on',this.checked)"><span class="tog-t"><span class="tog-th"></span></span></label>
+              </div>
+              <div class="step-btns">
+                <button type="button" class="btn-bk" onclick="goStep(1)">&#8592;</button>
+                <button type="button" class="btn-nxt" onclick="goStep(3)">Suivant &#8594;</button>
+              </div>
+            </div>
+
+            <!-- Etape 3 -->
+            <div class="step-panel" id="sp3">
+              <div class="fld"><label>D&#233;crivez votre besoin</label><textarea class="inp" id="f_message" name="message" placeholder="Superficie approximative, acc&#232;s, &#233;tat actuel du chantier..."></textarea></div>
+              <div class="fld"><label>Comment nous avez-vous trouv&#233;s ?</label>
+                <select class="inp" id="f_source" name="source">
+                  <option value="">S&#233;lectionnez...</option>
+                  <option value="Bouche a oreille">Bouche &#224; oreille</option>
+                  <option value="Google">Google</option>
+                  <option value="Reseaux sociaux">R&#233;seaux sociaux</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+              <div class="step-btns" style="margin-bottom:16px"><button type="button" class="btn-bk" onclick="goStep(2)">&#8592;</button></div>
+              <button type="button" id="sendBtn" onclick="sendMail()"><span id="sendTxt">Envoyer ma demande</span></button>
+              <p class="fnote">Donn&#233;es confidentielles. En soumettant ce formulaire vous acceptez notre <a onclick="openRgpd()">politique de confidentialit&#233;</a>.</p>
+            </div>
+          </div>
+          </form>
+          <div id="fOk">
+            <div class="fok-ic">&#9989;</div>
+            <h3>Demande re&#231;ue !</h3>
+            <p>Nous vous contactons dans les <strong>24 heures</strong> avec votre devis.<br>Merci &mdash; Sernettoyage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div-cream-to-dark"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-logo"><b>Sernettoyage</b></div>
+        <p>Nettoyage professionnel ext&#233;rieur et int&#233;rieur dans toute la France depuis 2021. Qualit&#233; et rigueur garanties.</p>
+      </div>
+      <div class="ft-col"><h5>Services</h5><ul>
+        <li><a href="#sernettoyage">Terrasses &amp; all&#233;es</a></li>
+        <li><a href="#sernettoyage">Fa&#231;ades</a></li>
+        <li><a href="#sernettoyage">Toitures</a></li>
+        <li><a href="#sernettoyage">G&#238;tes</a></li>
+        <li><a href="#sernettoyage">Chantiers</a></li>
+        <li><a href="#realisations">R&#233;alisations</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Navigation</h5><ul>
+        <li><a href="#temoignages">Avis clients</a></li>
+        <li><a href="#prix">Tarifs</a></li>
+        <li><a href="#apropos">&#192; propos</a></li>
+        <li><a href="#contact">Devis gratuit</a></li>
+        <li><a onclick="openRgpd();return false" href="#">Confidentialit&#233;</a></li>
+      </ul></div>
+      <div class="ft-col"><h5>Contact</h5><ul>
+        <li><a href="tel:+33781308416">07 81 30 84 16</a></li>
+        <li><a href="mailto:serexpress45@gmail.com">serexpress45@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/SerNettoyage" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@SerNettoyage" target="_blank" rel="noopener">TikTok</a></li>
+      </ul></div>
+    </div>
+    <div class="ft-btm">
+      <p>&copy; Sernettoyage. Tous droits r&#233;serv&#233;s.</p>
+      <p>France enti&#232;re &mdash; 7j/7 &mdash; Urgences</p>
+    </div>
+  </div>
+</footer>
+
+<div id="page-trans-overlay" aria-hidden="true"></div>
+<script src="script.js"></script>
+</body>
+</html>
